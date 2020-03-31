@@ -2,13 +2,15 @@ package aplicacao;
 
 import tabuleiro.Campo;
 import tabuleiro.Posicao;
+import xadrez.PartidaXadrez;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Campo campo = new Campo(8,8);
-		System.out.println(campo);
+		//Instanciando partida de Xadrez
+		PartidaXadrez px = new PartidaXadrez();
+		//Imprime Tabuleiro
+		UI.printCampo(px.getPeca());
 
 	}
 
