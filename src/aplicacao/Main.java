@@ -1,13 +1,14 @@
 package aplicacao;
 
+import tabuleiro.Campo;
 import tabuleiro.Posicao;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Posicao pos = new Posicao (3,5);
-		System.out.println(pos);
+		Campo campo = new Campo(8,8);
+		System.out.println(campo);
 
 	}
 
