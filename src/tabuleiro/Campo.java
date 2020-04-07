@@ -34,7 +34,12 @@ public class Campo {
 	public Peca pecas(Posicao posicao) {
 		return pecas[posicao.getLinha()][posicao.getColuna()];
 	}
-	
+	//Pega a peca e a posicao para colocar no campo
+	public void pecaCampo(Peca peca,Posicao posicao) {
+		pecas[posicao.getLinha()][posicao.getColuna()] = peca; //pega a posição da matriz peça e passa para a peça
+		peca.posicao = posicao;
+		
+	}
 	
 
 }

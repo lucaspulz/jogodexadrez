@@ -1,6 +1,9 @@
 package xadrez;
 
 import tabuleiro.Campo;
+import tabuleiro.Posicao;
+import xadrez.pecas.Rei;
+import xadrez.pecas.Torre;
 
 public class PartidaXadrez {
 	
@@ -10,6 +13,8 @@ public class PartidaXadrez {
 	public PartidaXadrez() {
 		//tamanho do campo 8 linhas e 8 colunas
 		campo = new Campo(8,8);
+		//e cria a partida
+		iniciaPartida();
 	}
 	
 	//Retorna uma Matriz de Peça de Xadrez para Partida
@@ -25,6 +30,13 @@ public class PartidaXadrez {
 			}
 		}
 		return mat;
+	}
+	//metodo responsavel por iniciar a partida colocando as pelas no campo
+	private void iniciaPartida() {
+		campo.pecaCampo(new Torre(campo,Cor.WHITE), new Posicao(2,1));
+		campo.pecaCampo(new Torre(campo,Cor.BLACK), new Posicao(7,1));
+		campo.pecaCampo(new Rei(campo,Cor.WHITE), new Posicao(0,3));
+		
 	}
 
 }
