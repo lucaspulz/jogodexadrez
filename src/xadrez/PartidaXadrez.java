@@ -35,7 +35,8 @@ public class PartidaXadrez {
 	private void iniciaPartida() {
 		campo.pecaCampo(new Torre(campo,Cor.WHITE), new Posicao(2,1));
 		campo.pecaCampo(new Torre(campo,Cor.BLACK), new Posicao(7,1));
-		campo.pecaCampo(new Rei(campo,Cor.WHITE), new Posicao(0,3));
+		campo.pecaCampo(new Rei(campo,Cor.WHITE), new Posicao(7,1));
+		
 		
 	}
 
