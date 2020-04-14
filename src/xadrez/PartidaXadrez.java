@@ -31,11 +31,15 @@ public class PartidaXadrez {
 		}
 		return mat;
 	}
+	//Metodo Recebe Coordenada do Xadrez Converte Chamando o Metodo toPosicao da classe XadrezPosicao
+	private void partidaNovaPeca(char coluna,int linha,PecaXadrez peca) {
+		campo.pecaCampo(peca, new XadrezPosicao(coluna,linha).toPosicao());
+	}
 	//metodo responsavel por iniciar a partida colocando as pelas no campo
 	private void iniciaPartida() {
-		campo.pecaCampo(new Torre(campo,Cor.WHITE), new Posicao(2,1));
-		campo.pecaCampo(new Torre(campo,Cor.BLACK), new Posicao(7,1));
-		campo.pecaCampo(new Rei(campo,Cor.WHITE), new Posicao(7,1));
+		partidaNovaPeca('b',6,new Torre(campo,Cor.WHITE));
+		partidaNovaPeca('e',8,new Rei(campo,Cor.BLACK));
+		partidaNovaPeca('e',1,new Rei(campo,Cor.WHITE));
 		
 		
 	}
